@@ -1,44 +1,74 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>One Page Website</title>
-	</head>
-		<body>
-			<nav>
-				<a href="#">Home</a>
-				<a href="#">Gallery</a>
-				<a href="#">Contact</a>
-				<a href="#">Videos</a>
-			</nav>
-		
-			<section>
-				<h1>Welcome to Our One Page Website</h1>
-				<p>Have fun while looking around our new website</p>
-			</section>
-			
-			<section>
-				<p>Below is an image of a gorgeous car</p>
-				<img src="download.jfif" alt="">
-			</section>
-			
-			<section>
-				<form>
-					<label for="FirstName">First Name</label>
-					<input type="text"><br>
-					<label for="FirstName">Last Name</label>
-					<input type="text"><br>
-					<label for="Email">email</label>
-					<input type="email"><br><br>
-				</form>
-			
-			</section>
-			
-			<section>
-				<iframe src="https://www.youtube.com/watch?v=EbKUwQxWg0A" ></iframe>
-			</section>
-			<footer>
-			&copy; Web by A.T 2024
-			</footer>
-		</body>
+<head>
+	<title>One Page Website</title>
+	<link rel="stylesheet" href="JS/style.css">
+</head>
+<body>
+	<nav>
+		<a href="#">Home</a>
+		<a href="#">Gallery</a>
+		<a href="#">Contact</a>
+		<a href="#">Videos</a>
+	</nav>
 
+	<section>
+		<h1>Welcome to Our One Page Website</h1>
+		<p>Have fun while looking around our new website</p>
+	</section>
+	
+	<section>
+		<p>Below are images of a collection of randomly selected Range Rover cars</p>
+	</section>
+
+	<div class="lightbox">
+        <img src="files/car 1.jpeg" onclick="openModal();currentSlide(1)" class="thumbnail">
+        <img src="files/car2.jpeg" onclick="openModal();currentSlide(2)" class="thumbnail">
+        <img src="files/car3.jpg" onclick="openModal();currentSlide(3)" class="thumbnail">
+        <img src="files/car4.jpg" onclick="openModal();currentSlide(4)" class="thumbnail">
+    </div><br>
+
+    <!-- Modal -->
+    <div id="modalGallery" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <div class="mySlides">
+                <img src="files/car 1.jpeg" class="modal-image">
+            </div>
+            <div class="mySlides">
+                <img src="files/car2.jpg" class="modal-image">
+            </div>
+            <div class="mySlides">
+                <img src="files/car3.jpeg" class="modal-image">
+            </div>
+            <div class="mySlides">
+                <img src="files/car4.jpg" class="modal-image">
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+    </div>
+
+			
+			
+	<section>
+		<form>
+			<label for="FirstName">First Name</label>
+			<input type="text"><br><br>
+			<label for="FirstName">Last Name</label>
+			<input type="text"><br><br>
+			<label for="Email">Email</label>
+			<input type="email"><br><br>
+		</form>
+	
+	</section>
+	
+	<section>
+		<iframe src="https://www.youtube.com/watch?v=EbKUwQxWg0A" ></iframe>
+	</section>
+	<footer>
+	&copy; Web by A.T 2024
+	</footer>
+	<script src="JS/one_page_website.js"></script>
+</body>
 </html>
